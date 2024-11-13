@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fatec-SALA</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="labs.css"> 
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-straight/css/uicons-regular-straight.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+    <link rel='stylesheet'
+        href='https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-straight/css/uicons-solid-straight.css'>
+    <link rel="shortcut icon" href="Images/Fatec-SALA.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+
+        <h1>Fatec - SALA</h1>
+
+        <div class="busca">
+            <img src="Imagens/search.png" alt="Ícone de pesquisa">
+            <input id="pesquisa" type="text" placeholder="O que está procurando?">
+            <button id="limpa-input" class="btn-limpar" type="button">&times;</button>
+        </div>
+
+        <div id="icons">
+            <i title="Notificações" id="btn-notificacoes" class="fi fi-ss-bell"></i>
+            <i title="Perfil" id="btn-perfil" class="fi fi-ss-circle-user"></i>
+        </div>
+
+    </header>
+
+    <main>
+        <!-- Botão para adicionar novo andar ou laboratório -->
+        <section id="titulo">
+            <h1>*Adicione um novo andar</h1>
+        </section>
+    
+        <section id="card-cinza">
+            <img id="btn-adicionar-andar" src="imagens/mais.png" alt="adicionar andar">
+        </section>
+    
+        <!-- Sessão para exibir os andares criados -->
+        <div id="andares-container">
+            <!-- Aqui será adicionado o carrossel de cada andar -->
+        </div>
+    
+        <!-- Popup de criação de andares -->
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <button id="btn-fechar" class="btn-fechar">
+                    <img src="imagens/x.png" alt="Fechar">
+                </button>
+    
+                <div id="card-vermelho">
+                    <h1>ADICIONAR ANDAR</h1>
+                </div>
+                <div id="titulo-andar">
+                    <span>+</span><h1>Andar</h1>
+                </div>
+    
+                <form id="formulario-1">
+                    <div id="titulo-nome">
+                        <h2>NOME:</h2>
+                    </div>
+                    <div id="box-input-nome">
+                        <input type="text" id="input-nome" placeholder="Ex: Primeiro andar">
+                    </div>
+    
+                    <div id="titulo-cor">
+                        <h2>COR:</h2>
+                    </div>
+                    <div id="box-input-cor">
+                        <div class="custom-select">
+                            <div class="selected-option" id="input-cor">Selecione uma cor</div>
+                            <ul class="options-list">
+                                <li data-value="rosa" style="color: #EB6E8E;">Rosa</li>
+                                <li data-value="azul" style="color: #337BC3;">Azul</li>
+                                <li data-value="amarelo" style="color: #FFB303;">Amarelo</li>
+                                <li data-value="roxo" style="color: #5A3168;">Roxo</li>
+                                <li data-value="verde" style="color: #2D854E;">Verde</li>
+                                <li data-value="vermelho" style="color: #eb1f2c;">Vermelho</li>
+                                <li data-value="laranja" style="color: #ff8324;">Laranja</li>
+                                <li data-value="cinza" style="color: #575757;">Cinza</li>
+                                <li data-value="marrom" style="color: rgb(147, 37, 37);">Marrom</li>
+                                <li data-value="preto" style="color: black;">Preto</li>
+                            </ul>
+                        </div>
+                    </div>
+    
+                    <div id="aviso">
+                        <h2>*Após criar o andar será possível personalizar os laboratórios</h2>
+                    </div>
+    
+                    <div id="section-button">
+                        <button type="button" class="cancelar">Cancelar</button>
+                        <button type="button" class="criar" id="btn-criar">Criar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    
+        <!-- Popup de criação de laboratórios -->
+        <div id="popup-laboratorio" class="popup">
+            <div class="popup-content">
+                <button id="btn-fechar-laboratorio" class="btn-fechar">
+                    <img src="imagens/x.png" alt="Fechar">
+                </button>
+    
+                <div id="card-vermelho-laboratorio">
+                    <h1>ADICIONAR LABORATÓRIO</h1>
+                </div>
+
+                <div id="titulo-laboratorio">
+                    <span>+</span><h1>Laboratório</h1>
+                </div>
+    
+                <form id="formulario-laboratorio">
+                    
+                    <div id="agrupamento1">
+                        <div id="titulo-nome-laboratorio">
+                            <h2>NOME:</h2>
+                        </div>
+
+                        <div id="titulo-cor-laboratorio">
+                            <h2>COR:</h2>
+                        </div>
+                        
+                        <div id="titulo-anexar-imagem">
+                            <h2>ANEXAR IMAGEM:</h2>
+                        </div>
+
+                        <div id="box-input-nome-laboratorio">
+                            <input type="text" id="input-nome-laboratorio" placeholder="Ex: Cad II">
+                        </div>
+
+                        <div id="box-input-cor">
+                            <div class="custom-select">
+                                <div class="selected-option" id="input-cor">Selecione uma cor</div>
+                                <ul class="options-list">
+                                    <li data-value="rosa" style="color: #EB6E8E;">Rosa</li>
+                                    <li data-value="azul" style="color: #337BC3;">Azul</li>
+                                    <li data-value="amarelo" style="color: #FFB303;">Amarelo</li>
+                                    <li data-value="roxo" style="color: #5A3168;">Roxo</li>
+                                    <li data-value="verde" style="color: #2D854E;">Verde</li>
+                                    <li data-value="vermelho" style="color: #eb1f2c;">Vermelho</li>
+                                    <li data-value="laranja" style="color: #ff8324;">Laranja</li>
+                                    <li data-value="cinza" style="color: #575757;">Cinza</li>
+                                    <li data-value="marrom" style="color: rgb(147, 37, 37);">Marrom</li>
+                                    <li data-value="preto" style="color: black;">Preto</li>
+                                </ul>
+                            </div>
+                        </div>
+                    
+                        <div id="box-input-anexarimagem">
+                            <input type="text" id="input-anexar-imagem" placeholder="Exemplo.png">
+                        </div>
+                    </div>
+                    
+                    <div id="agrupamento2">
+                        
+                        <div id="titulo-materiais">
+                            <h2>ADICIONAR MATERIAIS:</h2>
+                        </div>
+
+                    </div>
+
+                    <div id="section-button-laboratorio">
+                        <button type="button" class="cancelar">Cancelar</button>
+                        <button type="button" class="criar" id="btn-criar-laboratorio">Criar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    
+</body>
+    <script src="script.js"></script>
+</html>
